@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <title>🎄 Feliz Natal!</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #c62828, #2e7d32);
+      color: white;
+      text-align: center;
+      padding: 40px 20px;
+    }
+    .card {
+      background: rgba(0,0,0,0.3);
+      border-radius: 16px;
+      padding: 30px;
+      max-width: 400px;
+      margin: auto;
+    }
+    button {
+      background: #ffeb3b;
+      border: none;
+      border-radius: 12px;
+      padding: 12px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+    .presente {
+      display: none;
+      margin-top: 20px;
+      font-size: 18px;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="card">
+    <h1>🎄 Feliz Natal!</h1>
+    <p>Obrigado por fazer parte do nosso time em 2024.</p>
+
+    <button onclick="abrirPresente()">🎁 Abrir presente</button>
+
+    <div class="presente" id="presente">
+      <p>💛 Que 2025 venha com saúde, realizações e muito orgulho do que construímos juntos.</p>
+      <p><strong>Com carinho,</strong><br>Equipe</p>
+    </div>
+  </div>
+
+  <script>
+    function abrirPresente() {
+      document.getElementById("presente").style.display = "block";
+    }
+  </script>
+
+</body>
+</html>
