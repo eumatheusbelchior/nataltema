@@ -3,54 +3,153 @@
 <head>
   <meta charset="UTF-8" />
   <title>🎄 Feliz Natal!</title>
+
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: linear-gradient(135deg, #c62828, #2e7d32);
-      color: white;
-      text-align: center;
-      padding: 40px 20px;
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: linear-gradient(135deg, #424895, #41B780);
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
+
     .card {
-      background: rgba(0,0,0,0.3);
-      border-radius: 16px;
-      padding: 30px;
-      max-width: 400px;
-      margin: auto;
+      background: white;
+      color: #444243;
+      border-radius: 22px;
+      padding: 36px 30px;
+      max-width: 420px;
+      text-align: center;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+      animation: fadeIn 1s ease;
     }
+
+    .logo {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      color: #424895;
+      font-size: 22px;
+      margin-bottom: 18px;
+    }
+
+    p {
+      font-size: 15px;
+      line-height: 1.7;
+      margin-bottom: 14px;
+    }
+
     button {
-      background: #ffeb3b;
+      background: #41B780;
+      color: white;
       border: none;
-      border-radius: 12px;
-      padding: 12px 20px;
-      font-size: 16px;
+      border-radius: 16px;
+      padding: 14px 26px;
+      font-size: 15px;
       cursor: pointer;
       margin-top: 20px;
     }
-    .presente {
+
+    button:hover {
+      opacity: 0.9;
+    }
+
+    .mensagem {
       display: none;
-      margin-top: 20px;
-      font-size: 18px;
+      margin-top: 22px;
+      animation: fadeIn 0.8s ease;
+    }
+
+    .assinatura {
+      margin-top: 18px;
+      font-weight: bold;
+      color: #424895;
+    }
+
+    .gif {
+      display: none;
+      margin-top: 24px;
+    }
+
+    .gif img {
+      max-width: 100%;
+      border-radius: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
     }
   </style>
 </head>
+
 <body>
 
   <div class="card">
+
+    <img src="logo-tema.png" alt="Tema Ambiental" class="logo">
+
     <h1>🎄 Feliz Natal!</h1>
-    <p>Obrigado por fazer parte do nosso time em 2024.</p>
 
-    <button onclick="abrirPresente()">🎁 Abrir presente</button>
+    <button onclick="abrirMensagem()">Abrir mensagem</button>
 
-    <div class="presente" id="presente">
-      <p>💛 Que 2025 venha com saúde, realizações e muito orgulho do que construímos juntos.</p>
-      <p><strong>Com carinho,</strong><br>Equipe</p>
+    <div class="mensagem" id="mensagem">
+
+      <p>
+        Que esse fim de ano seja um respiro.<br>
+        Tempo de estar com quem faz bem,<br>
+        de descansar a cabeça<br>
+        e de lembrar que ninguém constrói nada sozinho.
+      </p>
+
+      <p>
+        Queria te agradecer de verdade.<br>
+        Pelo trabalho, pelas ideias, pela dedicação<br>
+        e também pelos dias difíceis — que fazem parte do caminho.
+      </p>
+
+      <p>
+        A Tema é feita de pessoas,<br>
+        e cada uma deixa sua marca aqui.<br>
+        Isso importa. Muito.
+      </p>
+
+      <p>
+        Que 2026 venha com saúde, leveza,<br>
+        bons encontros, novos aprendizados<br>
+        e motivos reais pra ter orgulho do que fazemos.
+      </p>
+
+      <p>
+        Espero que você tenha um Natal cheio de afeto<br>
+        e um Ano Novo do jeito que merece.
+      </p>
+
+      <p>
+        Obrigado por estar com a gente.
+      </p>
+
+      <div class="assinatura">
+        Com carinho,<br>
+        Matheus Belchior
+      </div>
+
     </div>
+
+    <div class="gif" id="gif">
+      <img src="gif-natal.gif" alt="Feliz Natal 🎅">
+    </div>
+
   </div>
 
   <script>
-    function abrirPresente() {
-      document.getElementById("presente").style.display = "block";
+    function abrirMensagem() {
+      document.getElementById("mensagem").style.display = "block";
+      document.getElementById("gif").style.display = "block";
     }
   </script>
 
